@@ -5,6 +5,7 @@ B = deque()
 C = []
 count = 0
 answer = set()
+# 괄호의 시작지점과 끝 지점을 저장
 for i in range(len(A)):
     if A[i] == '(':
         B.append(i)
@@ -12,7 +13,7 @@ for i in range(len(A)):
         start = B.pop()
         end = i
         C.append([start, end])
-
+# combination으로 묶어서 경우의 수를 모두 도출.
 for i in range(1, len(C)+1):
     D = list(combinations(C, i))
     for j in D:
