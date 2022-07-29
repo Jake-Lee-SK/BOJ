@@ -39,6 +39,7 @@ while input != int('0'):
 
     same = 0
 
+    # 퍼뮤테이션
     for perm in permutations(number, len(set(alpha_unorderd))):
         alpha_dicts = {}
         zero = 0
